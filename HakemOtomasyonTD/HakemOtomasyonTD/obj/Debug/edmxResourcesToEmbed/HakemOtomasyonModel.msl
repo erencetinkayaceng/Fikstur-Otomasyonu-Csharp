@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HakemOtomasyonDBModelStoreContainer" CdmEntityContainer="HakemOtomasyonDBEntities">
+    <EntitySetMapping Name="Hakem">
+      <EntityTypeMapping TypeName="HakemOtomasyonDBModel.Hakem">
+        <MappingFragment StoreEntitySet="Hakem">
+          <ScalarProperty Name="hakem_bolge" ColumnName="hakem_bolge" />
+          <ScalarProperty Name="hakem_grup" ColumnName="hakem_grup" />
+          <ScalarProperty Name="hakem_id" ColumnName="hakem_id" />
+          <ScalarProperty Name="hakem_adi" ColumnName="hakem_adi" />
+          <ScalarProperty Name="hakem_soyadi" ColumnName="hakem_soyadi" />
+          <ScalarProperty Name="hakem_tur" ColumnName="hakem_tur" />
+          <ScalarProperty Name="hakem_klasman" ColumnName="hakem_klasman" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SporSalonu">
+      <EntityTypeMapping TypeName="HakemOtomasyonDBModel.SporSalonu">
+        <MappingFragment StoreEntitySet="SporSalonu">
+          <ScalarProperty Name="salon_id" ColumnName="salon_id" />
+          <ScalarProperty Name="salon_adi" ColumnName="salon_adi" />
+          <ScalarProperty Name="salon_sehir" ColumnName="salon_sehir" />
+          <ScalarProperty Name="salon_ligi" ColumnName="salon_ligi" />
+          <ScalarProperty Name="salon_diger" ColumnName="salon_diger" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Takim">
+      <EntityTypeMapping TypeName="HakemOtomasyonDBModel.Takim">
+        <MappingFragment StoreEntitySet="Takim">
+          <ScalarProperty Name="takim_id" ColumnName="takim_id" />
+          <ScalarProperty Name="takim_adi" ColumnName="takim_adi" />
+          <ScalarProperty Name="takim_sehir" ColumnName="takim_sehir" />
+          <ScalarProperty Name="takim_ligi" ColumnName="takim_ligi" />
+          <ScalarProperty Name="takim_salon" ColumnName="takim_salon" />
+          <ScalarProperty Name="takim_diger" ColumnName="takim_diger" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fikstur">
+      <EntityTypeMapping TypeName="HakemOtomasyonDBModel.Fikstur">
+        <MappingFragment StoreEntitySet="Fikstur">
+          <ScalarProperty Name="fikstur_hakem" ColumnName="fikstur_hakem" />
+          <ScalarProperty Name="fikstur_salon" ColumnName="fikstur_salon" />
+          <ScalarProperty Name="fikstur_gun" ColumnName="fikstur_gun" />
+          <ScalarProperty Name="fikstur_saat" ColumnName="fikstur_saat" />
+          <ScalarProperty Name="fikstur_lig" ColumnName="fikstur_lig" />
+          <ScalarProperty Name="fikstur_hafta" ColumnName="fikstur_hafta" />
+          <ScalarProperty Name="fikstur_takim2" ColumnName="fikstur_takim2" />
+          <ScalarProperty Name="fikstur_takim1" ColumnName="fikstur_takim1" />
+          <ScalarProperty Name="fikstur_id" ColumnName="fikstur_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

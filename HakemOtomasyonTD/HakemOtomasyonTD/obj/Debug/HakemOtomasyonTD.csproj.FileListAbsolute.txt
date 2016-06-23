@@ -1,0 +1,17 @@
+D:\Win Calismalar\c#\HakemOtomasyonTD\HakemOtomasyonTD\obj\Debug\HakemOtomasyonTD.csprojResolveAssemblyReference.cache
+D:\Win Calismalar\c#\HakemOtomasyonTD\HakemOtomasyonTD\obj\Debug\HakemOtomasyonTD.AnaForm.resources
+D:\Win Calismalar\c#\HakemOtomasyonTD\HakemOtomasyonTD\obj\Debug\HakemOtomasyonTD.Properties.Resources.resources
+D:\Win Calismalar\c#\HakemOtomasyonTD\HakemOtomasyonTD\obj\Debug\HakemOtomasyonTD.View.FiksturForm.resources
+D:\Win Calismalar\c#\HakemOtomasyonTD\HakemOtomasyonTD\obj\Debug\HakemOtomasyonTD.View.HakemForm.resources
+D:\Win Calismalar\c#\HakemOtomasyonTD\HakemOtomasyonTD\obj\Debug\HakemOtomasyonTD.View.SalonForm.resources
+D:\Win Calismalar\c#\HakemOtomasyonTD\HakemOtomasyonTD\obj\Debug\HakemOtomasyonTD.View.TakimForm.resources
+D:\Win Calismalar\c#\HakemOtomasyonTD\HakemOtomasyonTD\obj\Debug\HakemOtomasyonTD.csproj.GenerateResource.Cache
+D:\Win Calismalar\c#\HakemOtomasyonTD\HakemOtomasyonTD\bin\Debug\HakemOtomasyonTD.exe.config
+D:\Win Calismalar\c#\HakemOtomasyonTD\HakemOtomasyonTD\bin\Debug\HakemOtomasyonTD.exe
+D:\Win Calismalar\c#\HakemOtomasyonTD\HakemOtomasyonTD\bin\Debug\HakemOtomasyonTD.pdb
+D:\Win Calismalar\c#\HakemOtomasyonTD\HakemOtomasyonTD\bin\Debug\EntityFramework.dll
+D:\Win Calismalar\c#\HakemOtomasyonTD\HakemOtomasyonTD\bin\Debug\EntityFramework.SqlServer.dll
+D:\Win Calismalar\c#\HakemOtomasyonTD\HakemOtomasyonTD\bin\Debug\EntityFramework.xml
+D:\Win Calismalar\c#\HakemOtomasyonTD\HakemOtomasyonTD\bin\Debug\EntityFramework.SqlServer.xml
+D:\Win Calismalar\c#\HakemOtomasyonTD\HakemOtomasyonTD\obj\Debug\HakemOtomasyonTD.exe
+D:\Win Calismalar\c#\HakemOtomasyonTD\HakemOtomasyonTD\obj\Debug\HakemOtomasyonTD.pdb

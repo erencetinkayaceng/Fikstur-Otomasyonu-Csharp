@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HakemOtomasyonDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Fikstur">
+    <Key>
+      <PropertyRef Name="fikstur_id" />
+    </Key>
+    <Property Name="fikstur_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fikstur_takim1" Type="nvarchar" MaxLength="100" />
+    <Property Name="fikstur_takim2" Type="nvarchar" MaxLength="100" />
+    <Property Name="fikstur_hafta" Type="nvarchar" MaxLength="50" />
+    <Property Name="fikstur_lig" Type="nvarchar" MaxLength="50" />
+    <Property Name="fikstur_saat" Type="nvarchar" MaxLength="50" />
+    <Property Name="fikstur_gun" Type="nvarchar" MaxLength="50" />
+    <Property Name="fikstur_salon" Type="nvarchar" MaxLength="50" />
+    <Property Name="fikstur_hakem" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Hakem">
+    <Key>
+      <PropertyRef Name="hakem_id" />
+    </Key>
+    <Property Name="hakem_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="hakem_adi" Type="nvarchar" MaxLength="50" />
+    <Property Name="hakem_soyadi" Type="nvarchar" MaxLength="50" />
+    <Property Name="hakem_tur" Type="nvarchar" MaxLength="50" />
+    <Property Name="hakem_klasman" Type="nvarchar" MaxLength="50" />
+    <Property Name="hakem_bolge" Type="nvarchar" MaxLength="50" />
+    <Property Name="hakem_grup" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="SporSalonu">
+    <Key>
+      <PropertyRef Name="salon_id" />
+    </Key>
+    <Property Name="salon_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="salon_adi" Type="nvarchar" MaxLength="100" />
+    <Property Name="salon_sehir" Type="nvarchar" MaxLength="50" />
+    <Property Name="salon_ligi" Type="nvarchar" MaxLength="50" />
+    <Property Name="salon_diger" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Takim">
+    <Key>
+      <PropertyRef Name="takim_id" />
+    </Key>
+    <Property Name="takim_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="takim_adi" Type="nvarchar" MaxLength="100" />
+    <Property Name="takim_sehir" Type="nvarchar" MaxLength="50" />
+    <Property Name="takim_ligi" Type="nvarchar" MaxLength="50" />
+    <Property Name="takim_salon" Type="nvarchar" MaxLength="100" />
+    <Property Name="takim_diger" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityContainer Name="HakemOtomasyonDBModelStoreContainer">
+    <EntitySet Name="Fikstur" EntityType="Self.Fikstur" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Hakem" EntityType="Self.Hakem" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SporSalonu" EntityType="Self.SporSalonu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Takim" EntityType="Self.Takim" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="HakemOtomasyonDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Fikstur">
+          <Key>
+            <PropertyRef Name="fikstur_id" />
+          </Key>
+          <Property Name="fikstur_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fikstur_takim1" Type="nvarchar" MaxLength="100" />
+          <Property Name="fikstur_takim2" Type="nvarchar" MaxLength="100" />
+          <Property Name="fikstur_hafta" Type="nvarchar" MaxLength="50" />
+          <Property Name="fikstur_lig" Type="nvarchar" MaxLength="50" />
+          <Property Name="fikstur_saat" Type="nvarchar" MaxLength="50" />
+          <Property Name="fikstur_gun" Type="nvarchar" MaxLength="50" />
+          <Property Name="fikstur_salon" Type="nvarchar" MaxLength="50" />
+          <Property Name="fikstur_hakem" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Hakem">
+          <Key>
+            <PropertyRef Name="hakem_id" />
+          </Key>
+          <Property Name="hakem_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="hakem_adi" Type="nvarchar" MaxLength="50" />
+          <Property Name="hakem_soyadi" Type="nvarchar" MaxLength="50" />
+          <Property Name="hakem_tur" Type="nvarchar" MaxLength="50" />
+          <Property Name="hakem_klasman" Type="nvarchar" MaxLength="50" />
+          <Property Name="hakem_bolge" Type="nvarchar" MaxLength="50" />
+          <Property Name="hakem_grup" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SporSalonu">
+          <Key>
+            <PropertyRef Name="salon_id" />
+          </Key>
+          <Property Name="salon_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="salon_adi" Type="nvarchar" MaxLength="100" />
+          <Property Name="salon_sehir" Type="nvarchar" MaxLength="50" />
+          <Property Name="salon_ligi" Type="nvarchar" MaxLength="50" />
+          <Property Name="salon_diger" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Takim">
+          <Key>
+            <PropertyRef Name="takim_id" />
+          </Key>
+          <Property Name="takim_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="takim_adi" Type="nvarchar" MaxLength="100" />
+          <Property Name="takim_sehir" Type="nvarchar" MaxLength="50" />
+          <Property Name="takim_ligi" Type="nvarchar" MaxLength="50" />
+          <Property Name="takim_salon" Type="nvarchar" MaxLength="100" />
+          <Property Name="takim_diger" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityContainer Name="HakemOtomasyonDBModelStoreContainer">
+          <EntitySet Name="Fikstur" EntityType="Self.Fikstur" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Hakem" EntityType="Self.Hakem" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SporSalonu" EntityType="Self.SporSalonu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Takim" EntityType="Self.Takim" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="HakemOtomasyonDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Hakem">
+          <Key>
+            <PropertyRef Name="hakem_id" />
+          </Key>
+          <Property Name="hakem_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="hakem_adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="hakem_soyadi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="hakem_tur" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="hakem_klasman" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="hakem_grup" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="hakem_bolge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SporSalonu">
+          <Key>
+            <PropertyRef Name="salon_id" />
+          </Key>
+          <Property Name="salon_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="salon_adi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="salon_sehir" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="salon_ligi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="salon_diger" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Takim">
+          <Key>
+            <PropertyRef Name="takim_id" />
+          </Key>
+          <Property Name="takim_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="takim_adi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="takim_sehir" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="takim_ligi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="takim_salon" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="takim_diger" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="HakemOtomasyonDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Hakem" EntityType="Self.Hakem" />
+          <EntitySet Name="SporSalonu" EntityType="Self.SporSalonu" />
+          <EntitySet Name="Takim" EntityType="Self.Takim" />
+          <EntitySet Name="Fikstur" EntityType="HakemOtomasyonDBModel.Fikstur" />
+        </EntityContainer>
+        <EntityType Name="Fikstur">
+          <Key>
+            <PropertyRef Name="fikstur_id" />
+          </Key>
+          <Property Name="fikstur_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fikstur_takim1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="fikstur_takim2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="fikstur_hafta" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fikstur_lig" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fikstur_saat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fikstur_gun" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fikstur_salon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fikstur_hakem" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="HakemOtomasyonDBModelStoreContainer" CdmEntityContainer="HakemOtomasyonDBEntities">
+          <EntitySetMapping Name="Hakem">
+            <EntityTypeMapping TypeName="HakemOtomasyonDBModel.Hakem">
+              <MappingFragment StoreEntitySet="Hakem">
+                <ScalarProperty Name="hakem_bolge" ColumnName="hakem_bolge" />
+                <ScalarProperty Name="hakem_grup" ColumnName="hakem_grup" />
+                <ScalarProperty Name="hakem_id" ColumnName="hakem_id" />
+                <ScalarProperty Name="hakem_adi" ColumnName="hakem_adi" />
+                <ScalarProperty Name="hakem_soyadi" ColumnName="hakem_soyadi" />
+                <ScalarProperty Name="hakem_tur" ColumnName="hakem_tur" />
+                <ScalarProperty Name="hakem_klasman" ColumnName="hakem_klasman" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SporSalonu">
+            <EntityTypeMapping TypeName="HakemOtomasyonDBModel.SporSalonu">
+              <MappingFragment StoreEntitySet="SporSalonu">
+                <ScalarProperty Name="salon_id" ColumnName="salon_id" />
+                <ScalarProperty Name="salon_adi" ColumnName="salon_adi" />
+                <ScalarProperty Name="salon_sehir" ColumnName="salon_sehir" />
+                <ScalarProperty Name="salon_ligi" ColumnName="salon_ligi" />
+                <ScalarProperty Name="salon_diger" ColumnName="salon_diger" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Takim">
+            <EntityTypeMapping TypeName="HakemOtomasyonDBModel.Takim">
+              <MappingFragment StoreEntitySet="Takim">
+                <ScalarProperty Name="takim_id" ColumnName="takim_id" />
+                <ScalarProperty Name="takim_adi" ColumnName="takim_adi" />
+                <ScalarProperty Name="takim_sehir" ColumnName="takim_sehir" />
+                <ScalarProperty Name="takim_ligi" ColumnName="takim_ligi" />
+                <ScalarProperty Name="takim_salon" ColumnName="takim_salon" />
+                <ScalarProperty Name="takim_diger" ColumnName="takim_diger" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Fikstur">
+            <EntityTypeMapping TypeName="HakemOtomasyonDBModel.Fikstur">
+              <MappingFragment StoreEntitySet="Fikstur">
+                <ScalarProperty Name="fikstur_hakem" ColumnName="fikstur_hakem" />
+                <ScalarProperty Name="fikstur_salon" ColumnName="fikstur_salon" />
+                <ScalarProperty Name="fikstur_gun" ColumnName="fikstur_gun" />
+                <ScalarProperty Name="fikstur_saat" ColumnName="fikstur_saat" />
+                <ScalarProperty Name="fikstur_lig" ColumnName="fikstur_lig" />
+                <ScalarProperty Name="fikstur_hafta" ColumnName="fikstur_hafta" />
+                <ScalarProperty Name="fikstur_takim2" ColumnName="fikstur_takim2" />
+                <ScalarProperty Name="fikstur_takim1" ColumnName="fikstur_takim1" />
+                <ScalarProperty Name="fikstur_id" ColumnName="fikstur_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

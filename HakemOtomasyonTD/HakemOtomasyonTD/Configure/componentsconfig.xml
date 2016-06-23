@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components>
+	<label> 
+		<font-size>10</font-size>
+	</label>
+<buton>
+<font-size>20</font-size>
+<font-style>Microsoft Sans Serif</font-style>
+</buton>
+	<panel tip="birinci">
+	<bgcolor>Red</bgcolor>
+	<panel>
+<panel tip"ikinci">
+<bgcolor>Blue</bgcolor>
+<panel>
+</components>

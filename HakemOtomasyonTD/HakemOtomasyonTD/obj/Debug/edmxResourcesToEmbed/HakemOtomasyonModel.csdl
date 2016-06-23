@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HakemOtomasyonDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Hakem">
+    <Key>
+      <PropertyRef Name="hakem_id" />
+    </Key>
+    <Property Name="hakem_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="hakem_adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="hakem_soyadi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="hakem_tur" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="hakem_klasman" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="hakem_grup" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="hakem_bolge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="SporSalonu">
+    <Key>
+      <PropertyRef Name="salon_id" />
+    </Key>
+    <Property Name="salon_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="salon_adi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="salon_sehir" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="salon_ligi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="salon_diger" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Takim">
+    <Key>
+      <PropertyRef Name="takim_id" />
+    </Key>
+    <Property Name="takim_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="takim_adi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="takim_sehir" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="takim_ligi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="takim_salon" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="takim_diger" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="HakemOtomasyonDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Hakem" EntityType="Self.Hakem" />
+    <EntitySet Name="SporSalonu" EntityType="Self.SporSalonu" />
+    <EntitySet Name="Takim" EntityType="Self.Takim" />
+    <EntitySet Name="Fikstur" EntityType="HakemOtomasyonDBModel.Fikstur" />
+  </EntityContainer>
+  <EntityType Name="Fikstur">
+    <Key>
+      <PropertyRef Name="fikstur_id" />
+    </Key>
+    <Property Name="fikstur_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fikstur_takim1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="fikstur_takim2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="fikstur_hafta" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fikstur_lig" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fikstur_saat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fikstur_gun" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fikstur_salon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fikstur_hakem" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>
